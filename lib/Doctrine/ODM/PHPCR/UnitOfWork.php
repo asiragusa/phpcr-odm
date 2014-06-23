@@ -1267,7 +1267,7 @@ class UnitOfWork
                         : PathHelper::getParentPath($this->getDocumentId($document));
                 }
                 if (false === $destName) {
-                    $destName = $actualData[$class->nodename]
+                    $destName = $class->nodename !== null && $actualData[$class->nodename]
                         ? $actualData[$class->nodename]
                         : PathHelper::getNodeName($this->getDocumentId($document));
                 }
